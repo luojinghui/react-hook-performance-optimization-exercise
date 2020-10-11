@@ -15,7 +15,7 @@ function App() {
 
         {/* <UseCallbackMemo></UseCallbackMemo> */}
 
-        {/* <UseCallbackTest></UseCallbackTest> */}
+        <UseCallbackTest></UseCallbackTest>
 
         {/* <UseCallbackReducer></UseCallbackReducer> */}
 

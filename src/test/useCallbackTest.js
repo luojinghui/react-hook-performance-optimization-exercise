@@ -12,16 +12,13 @@ const Button = ({ handleClick }) => {
 
 const UseCallbackTest = () => {
   const [isOn, setIsOn] = React.useState(false);
+  const handleClick = () => setIsOn(!isOn);
 
   return (
     <div className="App">
       <h2>{isOn ? "on" : "off"}</h2>
 
-      <Button
-        handleClick={() => {
-          setIsOn(!isOn);
-        }}
-      ></Button>
+      <Button handleClick={handleClick}></Button>
     </div>
   );
 };
