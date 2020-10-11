@@ -24,10 +24,8 @@ const UseMemoDemo = () => {
     setState(e.target.value);
   };
 
-  const newValue = React.useMemo(
-    () => "Value:" + val + Math.ceil(Math.random() * 1000),
-    [val]
-  );
+  // 这里使用useMemo缓存值
+  const newValue = "Value:" + val + Math.ceil(Math.random() * 1000);
 
   return (
     <div className="App">
