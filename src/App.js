@@ -5,6 +5,7 @@ import Test from "./test/Test";
 import UseCallbackReducer from "./test/useCallbackReducer";
 import UseMemoDemo from "./test/useMemoDemo";
 import ProviderDemo from "./test/providerDemo";
+import UseCallbackTest from "./test/singleProps";
 
 import { RecoilRoot } from "recoil";
 
@@ -12,7 +13,7 @@ function App() {
   return (
     <RecoilRoot>
       <div className="App">
-        <Test></Test>
+        {/* <Test></Test> */}
 
         {/* <MemoDemo></MemoDemo> */}
 
@@ -22,7 +23,9 @@ function App() {
 
         {/* <UseMemoDemo></UseMemoDemo> */}
 
-        {/* <ProviderDemo></ProviderDemo> */}
+        <ProviderDemo></ProviderDemo>
+
+        {/* <UseCallbackTest></UseCallbackTest> */}
       </div>
     </RecoilRoot>
   );

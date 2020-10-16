@@ -45,16 +45,13 @@ const Content = React.memo(() => {
 });
 
 const ProviderDemo = () => {
-  const [theme, switchTheme] = useState(redTheme);
-  const value = React.useMemo(() => ({ theme, switchTheme }), [theme]);
-
   return (
-    <ThemeContext.Provider value={value}>
+    <ThemeProvider>
       <div className="App">
         <Header />
         <Content />
       </div>
-    </ThemeContext.Provider>
+    </ThemeProvider>
   );
 };
 

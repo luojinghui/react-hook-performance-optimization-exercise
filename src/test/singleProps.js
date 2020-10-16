@@ -10,7 +10,8 @@ const UseCallbackTest = () => {
     { data: 2, id: 2 },
     { data: 3, id: 3 },
   ]);
-  const { activeId } = React.useState(1);
+  
+  const [activeId] = React.useState(true);
 
   return (
     <div className="App">

@@ -12,9 +12,9 @@ const MyComponentWithoutUseMemo = () => {
   return <p>MyComponent without useMemo. Ref count: {refCount.current}</p>;
 };
 
-const MyComponentMemo = ({ value }) => {
+const MyComponentMemo = React.memo(({ value }) => {
   return <p>MyComponent without useMemo. {value}</p>;
-};
+});
 
 const UseMemoDemo = () => {
   const [state, setState] = React.useState("");
@@ -25,7 +25,10 @@ const UseMemoDemo = () => {
   };
 
   // 这里使用useMemo缓存值
-  const newValue = "Value:" + val + Math.ceil(Math.random() * 1000);
+  const newValue = React.useMemo(
+    () => "Value:" + val + Math.ceil(Math.random() * 1000),
+    [val]
+  );
 
   return (
     <div className="App">
@@ -33,6 +36,7 @@ const UseMemoDemo = () => {
       <MyComponentWithoutUseMemo />
 
       <MyComponentMemo value={newValue} />
+
       <button
         onClick={() => {
           setVal(Date.now());

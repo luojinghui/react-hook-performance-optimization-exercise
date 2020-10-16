@@ -12,7 +12,9 @@ const MyComponent = ({ myprops }) => {
   );
 };
 
-const MemorizeMyComponent = React.memo(MyComponent);
+const MemorizeMyComponent = React.memo(MyComponent, (prevProps, nextProps) => {
+  return prevProps.data.a === nextProps.data.a;
+});
 
 const MemoDemo = () => {
   const [state, setState] = React.useState("");
@@ -30,7 +32,7 @@ const MemoDemo = () => {
         myprops="MemorizeMyComponent"
 
         // handleSetState={handleSetState}
-        data={{ a: 1 }}
+        // data={{ a: 1 }}
       />
     </div>
   );
