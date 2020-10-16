@@ -12,7 +12,7 @@ function App() {
   return (
     <RecoilRoot>
       <div className="App">
-        {/* <Test></Test> */}
+        <Test></Test>
 
         {/* <MemoDemo></MemoDemo> */}
 

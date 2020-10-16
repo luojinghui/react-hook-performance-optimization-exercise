@@ -45,26 +45,17 @@ const Content = React.memo(() => {
 });
 
 const ProviderDemo = () => {
+  const [theme, switchTheme] = useState(redTheme);
+  const value = React.useMemo(() => ({ theme, switchTheme }), [theme]);
+
   return (
-    <ThemeProvider>
+    <ThemeContext.Provider value={value}>
       <div className="App">
         <Header />
         <Content />
       </div>
-    </ThemeProvider>
+    </ThemeContext.Provider>
   );
-
-  // const [theme, switchTheme] = useState(redTheme);
-  // const value = React.useMemo(() => ({ theme, switchTheme }), [theme]);
-
-  // return (
-  //   <ThemeContext.Provider value={value}>
-  //     <div className="App">
-  //       <Header />
-  //       <Content />
-  //     </div>
-  //   </ThemeContext.Provider>
-  // );
 };
 
 export default ProviderDemo;
