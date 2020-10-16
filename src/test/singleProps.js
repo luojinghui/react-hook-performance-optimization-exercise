@@ -5,7 +5,7 @@ const Item = ({ item }) => {
 };
 
 const UseCallbackTest = () => {
-  const [list, setList] = React.useState([
+  const [list] = React.useState([
     { data: 1, id: 1 },
     { data: 2, id: 2 },
     { data: 3, id: 3 },

@@ -26,7 +26,12 @@ const MemoDemo = () => {
       <input type="text" value={state} onChange={handleSetState} />
 
       <MyComponent myprops="MyComponent" />
-      <MemorizeMyComponent myprops="MemorizeMyComponent" />
+      <MemorizeMyComponent
+        myprops="MemorizeMyComponent"
+
+        // handleSetState={handleSetState}
+        data={{ a: 1 }}
+      />
     </div>
   );
 };
